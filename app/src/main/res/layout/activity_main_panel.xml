@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:padding="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="649dp"
+        android:background="@color/colorGrey"
+        android:id="@+id/mainPanelScrollView"
+        tools:context=".MainPanelActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/mainPanelRelLayFragment"
+                android:elevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
+
+                <FrameLayout
+                    android:id="@+id/mainPanelFragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainPanelCardViewUserName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/mainPanelTextViewUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Witaj Slawek"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:background="@drawable/button_default"
+                        android:id="@+id/mainPanelButtonChangeUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Zmien uzytkownika"
+                        android:textSize="8sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainPanelCardViewSummary"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/mainPanelCardViewUserName"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/mainPanelTextViewPodsumowanie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Podsumowanie"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mainPanelTextViewTenTydzien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mainPanelTextViewPodsumowanie"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Ten tydzien"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="178dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewDochody"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dochody:" />
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewWydatki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mainPanelTextViewDochody"
+                            android:text="Wydatki:" />
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewBilans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mainPanelTextViewWydatki"
+                            android:text="Bilans:" />
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewDochodyDouble"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 zł"
+                            android:textColor="@color/colorGreen" />
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewWydatkiDouble"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mainPanelTextViewDochodyDouble"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 zł"
+                            android:textColor="@color/colorRed" />
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewBilansDouble"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mainPanelTextViewWydatkiDouble"
+                            android:layout_alignParentRight="true"
+                            android:text="0.00 zł" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/mainPanelRelLayBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@id/mainPanelCardViewSummary">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mainPanelCardViewExpendituresGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/mainPanelRelLayInsideCardViewExpenditures"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/mainPanelTextViewExpInsideCardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Wydatki - ostatnie 7 dni - wykres"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/mainPanelBarChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+
+                    </RelativeLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/mainPanelRelLayBarChart"
+                android:id="@+id/mainPanelRelLayOutcomeList"
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:id="@+id/mainPanelTextViewWydatkiOstatnie7Dni"
+                            android:text="Wydatki - ostatnie 7 dni - lista"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mainPanelOutcomeRecView"
+                            android:layout_margin="10dp"
+                            android:layout_below="@id/mainPanelTextViewWydatkiOstatnie7Dni"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/mainPanelRelLayOutcomeList"
+                android:id="@+id/mainPanelRelLayIncomeList"
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/mainPanelTextViewDochodyOstatnie7dni"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text="Dochody - ostatnie 7 dni - lista"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mainPanelIncomeRecView"
+                            android:layout_margin="10dp"
+                            android:layout_below="@id/mainPanelTextViewDochodyOstatnie7dni"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_below="@id/mainPanelScrollView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:background="@drawable/button_add_income"
+                android:id="@+id/mainPanelButtonAddIncome"
+                android:text="+"
+                android:layout_marginLeft="25dp"
+                android:layout_centerVertical="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:background="@drawable/button_add_outcome"
+                android:id="@+id/mainPanelButtonAddOutcome"
+                android:layout_marginRight="25dp"
+                android:text="-"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

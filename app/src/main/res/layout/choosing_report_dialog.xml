@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_height="440dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Wybierz okres za który zostanie wygenerowany raport"
+            android:id="@+id/reportDialogTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:background="@drawable/button_default"
+            android:text="Ostatni tydzień"
+            android:layout_below="@id/reportDialogTitle"
+            android:id="@+id/reportDialogButton7days"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="60dp"/>
+        <Button
+            android:background="@drawable/button_default"
+            android:layout_below="@id/reportDialogButton7days"
+            android:id="@+id/reportButtonDialog30days"
+            android:text="Ostatni miesiąc"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="60dp"/>
+        <Button
+            android:background="@drawable/button_default"
+            android:layout_below="@id/reportButtonDialog30days"
+            android:id="@+id/reportDialogButton90days"
+            android:text="Ostatni kwartał"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="60dp"/>
+        <Button
+            android:background="@drawable/button_default"
+            android:layout_below="@id/reportDialogButton90days"
+            android:id="@+id/reportDialogButton365days"
+            android:text="Ostatni rok"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="140dp"
+            android:layout_height="60dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

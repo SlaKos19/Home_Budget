@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity">
+
+    <RelativeLayout
+        android:id="@+id/prognosisActivityMainRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/prognosisActivitySummaryPanel"
+            android:background="@color/whtie"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:id="@+id/prognosisTitle"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Twoja prognoza wydatków na najbliższe 30 dni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/prognosisTitle"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:id="@+id/prognosisAmount"
+                android:textSize="20sp"
+                android:text="Spodziewane wydatki : 2048 zł"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/prognosisActivityRelLayWithOutcomeCategories"
+            android:layout_marginTop="7dp"
+            android:background="@color/whtie"
+            android:layout_below="@id/prognosisActivitySummaryPanel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/reportActivityYourIncomesTitle"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:text="Spodziewane wydatki względem kategorii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/reportActivityYourIncomesTitle"
+                android:id="@+id/prognosisActivityIncomeListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

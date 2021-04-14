@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="230dp"
+    android:padding="15dp">
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/creatingNewCategoryTitle"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Tworzenie nowej kategorii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:gravity="center"
+        android:hint="Wprowadź nazwę kategorii"
+        android:layout_marginTop="20dp"
+        android:id="@+id/creatingNewCategoryName"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/creatingNewCategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/creatingNewCategoryName"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/button_default"
+            android:layout_centerVertical="true"
+            android:id="@+id/creatingNewCategoryButtonCancel"
+            android:text="Anuluj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:background="@drawable/button_default"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/creatingNewCategoryButtonOK"
+            android:text="Dodaj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    tools:context=".ReportActivity">
+
+    <RelativeLayout
+        android:id="@+id/reportActivityMainRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/reportActivitySummaryPanel"
+            android:background="@color/whtie"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
+                android:text=""
+                android:id="@+id/reportActivityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:text="Zmień"
+                android:background="@drawable/button_default"
+                android:id="@+id/reportActivityButtonChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="35dp"
+                android:layout_below="@id/reportActivityTitle"
+                android:textStyle="bold"
+                android:text="Wydatki ogółem : "
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/reportActivityAllOutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/reportActivityAllOutcome"
+                android:textStyle="bold"
+                android:text="Dochody ogółem : "
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/reportActivityAllIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/reportActivityAllIncome"
+                android:textStyle="bold"
+                android:text="Bilans ogólny : "
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/reportActivityBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_below="@id/reportActivityTitle"
+                android:textStyle="bold"
+                android:text="3562.50 zł"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/reportActivityAllOutcomeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/reportActivityAllOutcomeAmount"
+                android:textStyle="bold"
+                android:text="-3623.50 zł"
+                android:textSize="20sp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/reportActivityAllIncomeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/reportActivityAllIncomeAmount"
+                android:textStyle="bold"
+                android:text="15223 zł"
+                android:textSize="20sp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/reportActivityBalanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reportActivityRelLayWithIncomeCategories"
+            android:layout_marginTop="7dp"
+            android:background="@color/whtie"
+            android:layout_below="@id/reportActivitySummaryPanel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/reportActivityYourIncomesTitle"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="Twoje dochody względem kategorii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/reportActivityYourIncomesTitle"
+                android:id="@+id/reportActivityIncomeListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reportActivityRelLayWithOutcomeCategories"
+            android:layout_marginTop="7dp"
+            android:background="@color/whtie"
+            android:layout_below="@id/reportActivityRelLayWithIncomeCategories"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/reportActivityYourOutcomeTitle"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="Twoje wydatki względem kategorii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/reportActivityYourOutcomeTitle"
+                android:id="@+id/reportActivityOutcomeListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

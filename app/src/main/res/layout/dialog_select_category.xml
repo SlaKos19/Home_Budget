@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:layout_height="450dp"
+    android:padding="20dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/dialogSelectCategoryTitle"
+        android:layout_centerHorizontal="true"
+        android:text="Wybierz kategorię"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/dialogSelectCategoryTitle"
+        android:layout_centerInParent="true"
+        android:id="@+id/dialogSelectCategoryListView"
+        android:layout_width="250dp"
+        android:layout_height="295dp" />
+
+    <Button
+        android:background="@drawable/button_default"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:text="Stwórz nową kategorię"
+        android:layout_below="@id/dialogSelectCategoryListView"
+        android:id="@+id/dialogSelectCategoryButtonCreateNewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
